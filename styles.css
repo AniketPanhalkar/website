@@ -1,0 +1,415 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background: #66FF00;
+    /* Primary color */
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+/* Section Styling */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Home Section Styling */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+        url('icon/example.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 20px;
+}
+
+/* Title Styling */
+#home .title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Subtitle Styling */
+#home .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 800px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home .title {
+        font-size: 2.5rem;
+    }
+
+    #home .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 5%;
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #66FF00;
+}
+
+/* About Content */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Paragraph Styling */
+.about-content p {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.about-content p:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Services Section */
+#services {
+    padding: 60px 5%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #66FF00;
+}
+
+/* Service Grid */
+#services .service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 20px;
+    /* Space between grid items */
+    margin-top: 30px;
+}
+
+/* Services Grid */
+#services .service {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-align: left;
+}
+
+/* Service Heading */
+#services .service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #66FF00;
+}
+
+/* Service Paragraph */
+#services .service p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Hover Effect */
+#services .service:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Medium Screens - Tablets */
+@media (max-width: 1024px) {
+    #services {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns */
+    }
+}
+
+/* Small Screens - Mobiles */
+@media (max-width: 768px) {
+    #services {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    #services {
+        grid-template-columns: 1fr;
+        /* 1 column */
+    }
+}
+
+/* Technology Stack Section */
+#tech-stack {
+    padding: 60px 5%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #66FF00;
+}
+
+/* Tech Category Container */
+.tech-category {
+    margin-bottom: 40px;
+}
+
+/* Tech Category Title */
+.tech-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Tech List Grid */
+.tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tech Item Styling */
+.tech-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Tech Icons */
+.tech-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Tech Name */
+.tech-item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Hover Effect */
+.tech-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .tech-list {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-category h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .tech-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    background: #f5f5f5;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 5%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+#contact h2 {
+    font-size: 2.5rem;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #66FF00;
+}
+
+/* Contact Details */
+#contact p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+}
+
+/* Hover Effect */
+#contact p a:hover {
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #services {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .full-width {
+        grid-column: span 3;
+    }
+}
